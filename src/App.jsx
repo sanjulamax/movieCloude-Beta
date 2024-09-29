@@ -6,7 +6,7 @@ import Home from './components/home'
 import {BrowserRouter , Routes , Route} from 'react-router-dom' 
 import Player from './components/player'  
 import Landing from './components/landing'
-import EngPlayerPage from './components/engPlayerPage'
+import EngPlayerPage from './components/EngPlayerPage'
 
 
 
