@@ -7,6 +7,8 @@ import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import Player from './components/player'  
 import Landing from './components/landing'
 import EngPlayerPage from './components/EngPlayerPage'
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
 
@@ -28,6 +30,9 @@ function App() {
       <Route path='/EngPlayerPage/:id' element={<EngPlayerPage/>} />
 
     </Routes>
+
+    <Analytics/>
+    <SpeedInsights/>
 
     
       
