@@ -38,7 +38,7 @@ const Home = ()=>{
             
             <button className = 'max-[430px]:text-[10px] max-[430px]:pl-2 max-[430px]:pr-2 max-[430px]:font-normal  pl-6 pr-6 font-bold bg-green-600 h-10 p-2 text-white rounded-3xl hover:bg-red-600' onClick={getMovies}>Get Movies</button> 
             </div>
-            <img src={logo} alt='logo' className='max-[430px]:w-2/6 max-[430px]:h-5/6 max-[430px]:flex max-[430px]:items-end w-1/3 h-16 ml-10 rounded-xl' />
+            <a href='/'><img src={logo} alt='logo' className='max-[430px]:w-2/6 max-[430px]:h-5/6 max-[430px]:flex max-[430px]:items-end w-1/3 h-16 ml-10 rounded-xl' /></a>
             <div className='sm:max-lg:hidden max-[430px]:hidden flex flex-row w-1/2 align-middle justify-end '>
             <a href='https://www.linkedin.com/in/savindu-abeywickrama-58a828311?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BT3J7IYuHRp%2BFyWWB8EO8%2FA%3D%3D'><img src={li} alt='linkedin' className='w-11 h-11 ml-6' /></a> 
 
