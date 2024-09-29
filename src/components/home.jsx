@@ -3,6 +3,11 @@ import React from 'react';
 import { Context } from './context';
 import { useContext } from 'react';
 import Player from './player';
+import yt from '../assets/yts.png'
+import li from '../assets/li23.png'
+import mail from '../assets/mail.png'
+import logo from '../assets/logo .png'
+
 
 
 
@@ -32,12 +37,12 @@ const Home = ()=>{
             
             <button className = 'max-[430px]:text-[10px] max-[430px]:pl-2 max-[430px]:pr-2 max-[430px]:font-normal  pl-6 pr-6 font-bold bg-green-600 h-10 p-2 text-white rounded-3xl hover:bg-red-600' onClick={getMovies}>Get Movies</button> 
             </div>
-            <img src='/src/assets/logo .png' alt='logo' className='max-[430px]:w-2/6 max-[430px]:h-5/6 max-[430px]:flex max-[430px]:items-end w-1/3 h-16 ml-10 rounded-xl' />
+            <img src={logo} alt='logo' className='max-[430px]:w-2/6 max-[430px]:h-5/6 max-[430px]:flex max-[430px]:items-end w-1/3 h-16 ml-10 rounded-xl' />
             <div className='sm:max-lg:hidden max-[430px]:hidden flex flex-row w-1/2 align-middle justify-end '>
-            <a href='https://www.linkedin.com/in/savindu-abeywickrama-58a828311?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BT3J7IYuHRp%2BFyWWB8EO8%2FA%3D%3D'><img src='/src/assets/li23.png' alt='linkedin' className='w-11 h-11 ml-6' /></a> 
+            <a href='https://www.linkedin.com/in/savindu-abeywickrama-58a828311?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BT3J7IYuHRp%2BFyWWB8EO8%2FA%3D%3D'><img src={li} alt='linkedin' className='w-11 h-11 ml-6' /></a> 
 
-           <a href='http://www.youtube.com/@slnoobhacker4903'><img src='/src/assets/yts.png' alt='yt' className='w-16 h-12 ml-6' /></a> 
-           <a href='mailto:sanjulasavindu400@gmail.com'><img src='/src/assets/mail.png' alt='mail' className='w-10 h-10 ml-6' /></a> 
+           <a href='http://www.youtube.com/@slnoobhacker4903'><img src={yt} alt='yt' className='w-16 h-12 ml-6' /></a> 
+           <a href='mailto:sanjulasavindu400@gmail.com'><img src={mail} alt='mail' className='w-10 h-10 ml-6' /></a> 
             </div>
             </div>
             
