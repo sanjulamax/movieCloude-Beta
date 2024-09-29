@@ -33,12 +33,12 @@ const Home = ()=>{
         <div className='  items-center flex flex-row bg-opacity-10 bg-white rounded-lg border-l-2 border-b-2 border-r-2 border-rose-500 p-6 mb-2 backdrop-blur-lg' >
             <div className='flex flex-row  w-1/2'>
 
-            <input className=' max-[430px]:h-5/ max-[430px]:w-5/6  border-2  h-10 border-blue-500 rounded-lg p-2 w-2/4 mr-6' type="text" placeholder="Enter Movie Name" value={inpMovie} onChange={(e)=>setInpMovie(e.target.value)} />
+            <input className=' max-[430px]:h-5/ max-[430px]:w-[120px]  border-2  h-10 border-blue-500 rounded-lg p-2 w-2/4 mr-6' type="text" placeholder="Enter Movie Name" value={inpMovie} onChange={(e)=>setInpMovie(e.target.value)} />
 
             
             <button className = 'max-[430px]:text-[10px] max-[430px]:pl-2 max-[430px]:pr-2 max-[430px]:font-normal  pl-6 pr-6 font-bold bg-green-600 h-10 p-2 text-white rounded-3xl hover:bg-red-600' onClick={getMovies}>Get Movies</button> 
             </div>
-            <a href='/'><img src={logo} alt='logo' className='max-[430px]:w-2/6 max-[430px]:h-5/6 max-[430px]:flex max-[430px]:items-end w-1/3 h-16 ml-10 rounded-xl' /></a>
+            <a href='/'><img src={logo} alt='logo' className='max-[430px]:w-4/6 max-[430px]:h-5/6 max-[430px]:flex max-[430px]:justify-start hover:border-4 hover:border-green-500 w-6/6 h-16 ml-10 rounded-xl' /></a>
             <div className='sm:max-lg:hidden max-[430px]:hidden flex flex-row w-1/2 align-middle justify-end '>
             <a href='https://www.linkedin.com/in/savindu-abeywickrama-58a828311?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BT3J7IYuHRp%2BFyWWB8EO8%2FA%3D%3D'><img src={li} alt='linkedin' className='w-11 h-11 ml-6' /></a> 
 
