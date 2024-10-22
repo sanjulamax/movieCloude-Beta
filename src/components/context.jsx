@@ -58,15 +58,22 @@ const ContextProvider = (props)=>{
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const fbKey = import.meta.env.VITE_API_FIRE_KEY
+const projectId = import.meta.env.VITE_API_PROJECT_ID
+const msg = import.meta.env.VITE_API_MASSAGE_ID
+const appId = import.meta.env.VITE_API_APP_ID
+const measure = import.meta.env.VITE_API_MEASURE_ID
+const storage = import.meta.env.VITE_API_STORAGE
+const auths = import.meta.env.VITE_API_AUTH
+
 const firebaseConfig = {
     
-  apiKey: "fbKey",
-  authDomain: "movieclaud.firebaseapp.com",
-  projectId: "movieclaud",
-  storageBucket: "movieclaud.appspot.com",
-  messagingSenderId: "730310858388",
-  appId: "1:730310858388:web:775892c545519305a00681",
-  measurementId: "G-86PS8DZLPB"
+  apiKey: fbKey,
+  authDomain: auths,
+  projectId: projectId,
+  storageBucket: storage,
+  messagingSenderId: msg,
+  appId: appId,
+  measurementId: measure
 };
 
 // Initialize Firebase
@@ -349,6 +356,7 @@ const register = async ()=>{
         saved ,
         cutBtn ,
         errClose , seErrClose ,
+        auth
      
 
        

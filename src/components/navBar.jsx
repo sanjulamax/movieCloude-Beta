@@ -28,6 +28,7 @@ const NavBar=()=>{
         logHider,
         setLogHider ,
         genre,
+        auth,
         
 
       
@@ -36,20 +37,9 @@ const NavBar=()=>{
     }=useContext(Context)
 
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyBPYNzEWh3-DsrdvhbA1uR15hyXUnLZ91c",
-        authDomain: "movieclaud.firebaseapp.com",
-        projectId: "movieclaud",
-        storageBucket: "movieclaud.appspot.com",
-        messagingSenderId: "730310858388",
-        appId: "1:730310858388:web:775892c545519305a00681",
-        measurementId: "G-86PS8DZLPB"
-      };
-      
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const auth = getAuth(app);
-      const analytics = getAnalytics(app);
+ 
+     
+ 
       const [loading , setLoading] = useState(true)
 
       useEffect (()=>{

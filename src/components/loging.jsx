@@ -11,23 +11,19 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc } from 'firebase/firestore';
 
+
+
+    
+
 const Loging = ()=>{
 
-
-    const firebaseConfig = {
-        apiKey: "AIzaSyBPYNzEWh3-DsrdvhbA1uR15hyXUnLZ91c",
-        authDomain: "movieclaud.firebaseapp.com",
-        projectId: "movieclaud",
-        storageBucket: "movieclaud.appspot.com",
-        messagingSenderId: "730310858388",
-        appId: "1:730310858388:web:775892c545519305a00681",
-        measurementId: "G-86PS8DZLPB"
-      };
-      
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const auth = getAuth(app);
-      const analytics = getAnalytics(app);
+    const  {
+        signIn,
+        setEmail,
+        setPassword,
+        setLogHider ,
+        auth
+    } = useContext(Context)
 
       const navigate = useNavigate()
 
@@ -52,12 +48,7 @@ const Loging = ()=>{
 
 
 
-    const  {
-        signIn,
-        setEmail,
-        setPassword,
-        setLogHider
-    } = useContext(Context)
+
 
     const [errClose , seErrClose] = useState(true) 
 
