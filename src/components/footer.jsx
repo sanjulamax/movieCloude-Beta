@@ -29,7 +29,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="hidden max-[431px]:flex  max-[431px]:flex-col">
-                    <a href='https://github.com/sanjulamax/My_Portfolio'><h1 className=" mb-10 text-xl hover:text-green-500 p-2 hover:bg-white rounded-lg border-2 border-green-500 bg-transparent text-white flex justify-center align-middle items-center ">About Me</h1></a>
+                    <a href='https://sanjulamax.github.io/portfolio/'><h1 className=" mb-10 text-xl hover:text-green-500 p-2 hover:bg-white rounded-lg border-2 border-green-500 bg-transparent text-white flex justify-center align-middle items-center ">About Me</h1></a>
                     <div className="w-full flex justify-center align-middle items-center "><img  src="/src/assets/logo .png"  width='200'></img></div>
                     <h2 className="w-full flex justify-center align-middle items-center">2024 ©</h2>
                 </div>
