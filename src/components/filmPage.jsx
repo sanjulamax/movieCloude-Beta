@@ -18,10 +18,25 @@ const FilmPage = () => {
         saveMovie , 
         userId ,
         saved ,
-        cutBtn
+        cutBtn ,
+        auth 
     } = useContext(Context)
 
     const {filmName} = useParams()
+
+    const [userIn , setUserIn] = useState(false)
+
+    onAuthStateChanged(auth,(user)=>{
+        if(user){
+            setUserIn(true)
+        }
+        else{
+            console.log('User is signed out')
+            setUserIn(false)
+
+        }
+    } )
+        
     
 
 
@@ -59,8 +74,8 @@ const FilmPage = () => {
             backgroundRepeat: 'no-repeat',}}>
                 <button className='absolute z-10 top-5 left-5 bg-black bg-opacity-50 text-white p-2 rounded-lg' onClick={()=>window.history.back()}>Back</button>
           
-                <button className='absolute z-10 top-5 left-20 bg-black bg-opacity-50 text-white p-2 rounded-lg' onClick={()=>window.location.href = '/cart'}>Cart</button>
-                <button className='absolute z-10 top-5 left-36 bg-black bg-opacity-50 text-white p-2 rounded-lg' onClick={()=>window.location.href = '/'}>Home</button>
+             {userIn ? <button className='absolute z-10 top-5 left-36 bg-black bg-opacity-50 text-white p-2 rounded-lg' onClick={()=>window.location.href = '/cart'}>Cart</button> : null }
+                <button className='absolute z-10 top-5 left-20 bg-black bg-opacity-50 text-white p-2 rounded-lg' onClick={()=>window.location.href = '/'}>Home</button>
             <div id='msg' className=' hidden absolute z-10 left-[15%] border-2 border-green-400 bg-green-500 top-[5%] pl-5 pr-5 text-white'> Save Successfully <button className='ml-3 text-xs' onClick={()=>cutBtn('msg')}>❌</button> </div>
                
                 
@@ -73,7 +88,7 @@ const FilmPage = () => {
                 <p className='text-xl mt-3 mr-10'> ⭐ {data.results[0].vote_average}</p></div>
                 <div className='flex  mt-5'><a href={`/player/${data.results[0].id}`} className=' border-2 border-transparent hover:bg-transparent hover:border-2 hover:border-green-500 text-sm  w-[100%] mr-5 pt-2 pb-2 bg-green-500 rounded-lg mt-5 text-white flex align-middle justify-center items-center'>Player One </a>
                 <a href={`/EngPlayerPage/${data.results[0].id}`} className=' border-2 border-transparent text-sm hover:bg-transparent hover:border-2 hover:border-red-500   mr-5 w-[100%] pt-2 pb-2 bg-red-500 rounded-lg mt-5 text-white flex align-middle justify-center items-center'>Player Two </a>
-                <button onClick={()=>saveMovie(data.results[0].id)} className=' border-2 border-transparent hover:bg-transparent hover:border-2 hover:border-blue-500 text-sm    w-[100%] ml-0 pt-2 pb-2 bg-blue-500 rounded-lg mt-5 text-white'>Save </button></div>
+                {userIn ? <button onClick={()=>saveMovie(data.results[0].id)} className=' border-2 border-transparent hover:bg-transparent hover:border-2 hover:border-blue-500 text-sm    w-[100%] ml-0 pt-2 pb-2 bg-blue-500 rounded-lg mt-5 text-white'>Save </button> : null }</div>
                 
                
                
