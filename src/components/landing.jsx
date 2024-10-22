@@ -3,6 +3,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { Context } from './context';
 import Home from './home';
+import loading from '../assets/loading.gif';
 
 import Footer from './footer';
 
@@ -31,7 +32,7 @@ const Landing = () => {
             
             <Home />
 
-        <div id='loading' className='hidden flex-row items-center justify-center align-middle w-screen bg-black bg-opacity-10 text-white h-screen text-5xl'><img className='rounded-full' src='/src/assets/loading.gif' width="400"></img></div> :
+        <div id='loading' className='hidden flex-row items-center justify-center align-middle w-screen bg-black bg-opacity-10 text-white h-screen text-5xl'><img className='rounded-full' src={loading} width="400"></img></div> :
         <div className=' grid grid-cols-6 max-[431px]:grid max-[431px]:grid-cols-3  ' >
             {searchHider ? startupMvList.map((item)=>{
 

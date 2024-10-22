@@ -5,6 +5,8 @@ import { useContext } from 'react';
 import Player from './player';
 import NavBar from './navBar';
 import { useNavigate } from 'react-router-dom';
+import loading from '../assets/loading.gif'
+import noRes from '../assets/search_no_result.png'
 
 
 
@@ -53,10 +55,10 @@ const Home = ()=>{
             </div>*/
             <div className='bg-landBack'>
             <NavBar />  
-           {LoadingGens ?  <div className='flex flex-row items-center justify-center align-middle w-screen bg-black bg-opacity-10 text-white h-screen text-5xl'><img className='rounded-full' src='/src/assets/loading.gif' width="400"></img></div> :
+           {LoadingGens ?  <div className='flex flex-row items-center justify-center align-middle w-screen bg-black bg-opacity-10 text-white h-screen text-5xl'><img className='rounded-full' src={loading} width="400"></img></div> :
             
    <div className='grid grid-cols-6 max-[431px]:grid max-[431px]:grid-cols-3 ' >
-              {noMovie ?<div className=' border-2 border-white w-screen h-screen flex items-start justify-center '> <div className='border-2 mt-20 border-white backdrop-blur-lg bg-white bg-opacity-10 rounded-lg '><img src="/src/assets/search_no_result.png" className='h-96  ' alt="no result found" /></div></div>:mvList.map((item)=>{
+              {noMovie ?<div className=' border-2 border-white w-screen h-screen flex items-start justify-center '> <div className='border-2 mt-20 border-white backdrop-blur-lg bg-white bg-opacity-10 rounded-lg '><img src={noRes} className='h-96  ' alt="no result found" /></div></div>:mvList.map((item)=>{
                        
      
                   return(

@@ -5,6 +5,7 @@ import Recom from './recomended';
 import { useContext } from 'react';
 import { Context } from './context';
 import Cart from './cart';
+import loading from '../assets/loading.gif'
 
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut , createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
 
@@ -41,7 +42,7 @@ const FilmPage = () => {
     const [data , setData] = useState([])
 
     if(data.results === undefined){
-        return <div className='flex flex-row items-center justify-center align-middle w-screen bg-black bg-opacity-10 text-white h-screen text-5xl'><img className='rounded-full' src='/src/assets/loading.gif' width="400"></img></div>
+        return <div className='flex flex-row items-center justify-center align-middle w-screen bg-black bg-opacity-10 text-white h-screen text-5xl'><img className='rounded-full' src={loading} width="400"></img></div>
     }
     if(data.results[0].backdrop_path === null){
         data.results[0].backdrop_path = data.results[0].poster_path

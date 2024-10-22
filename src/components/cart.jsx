@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Context } from './context';
+import noRes from '../assets/search_no_result.png'
 
 const Cart = () => {
   const { getSavedMovies, savedMoviesArray , noMovie , saved , setNoMovie } = useContext(Context);
@@ -38,7 +39,7 @@ const Cart = () => {
       </div>
       <div className='grid grid-cols-6 max-[431px]:grid max-[431px]:grid-cols-3 p-3'>
         <div id='emptryCart' className='border-2 mt-20 border-white backdrop-blur-lg bg-white bg-opacity-10 rounded-lg hidden'>
-          <img src="/src/assets/search_no_result.png" className='h-96' alt="no result found" />
+          <img src={noRes} className='h-96' alt="no result found" />
         </div>
         {movies.map((item) => {
           return (

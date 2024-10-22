@@ -10,7 +10,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";  
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { doc } from 'firebase/firestore';
-
+import log from '../assets/log.png'
 
 
     
@@ -69,7 +69,7 @@ const Loging = ()=>{
             <div className=" container w-fit border-2 border-green-500 bg-white flex p-5 rounded-2xl h-fit">
               
                 <div className="w-[50%] pr-6  mr-1 border-r-2 border-black">
-                    <img src="/src/assets/log.png" alt="logo" className="h-[100%] w-fit"/>
+                    <img src={log} alt="logo" className="h-[100%] w-fit"/>
                 </div>
                 <div className=" h-fit w-[50%] pl-3  ">
                     <h2 className="flex w-[100%] font-semibold text-2xl  align-middle justify-center items-center">Loging</h2>

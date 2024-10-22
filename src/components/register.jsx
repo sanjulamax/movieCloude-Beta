@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { Context } from "./context"
 import { useContext } from "react" 
 import { Navigate, useNavigate } from "react-router-dom" 
+import R4 from '../assets/R (4).png'
 const Register = ()=>{
 
     const{
@@ -63,7 +64,7 @@ const Register = ()=>{
 
             <div className="flex bg-white rounded-lg border-2 border-green-400 p-3 max-[431px]:w-screen max-[431px]:pr-3  w-[50%]  h-fit">
                 <div className=" flex max-[431px]:w-screen w-fit mt-2  mr-4">
-                    <img src="/src/assets/R (4).png" alt="" />
+                    <img src={R4} alt="" />
                 </div>
                 <div className="flex   flex-col w-[50%] h-full  pt-3 pr-3">
                     <label for='email' className=" font-semibold mb-2 ">Email</label>
