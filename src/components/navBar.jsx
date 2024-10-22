@@ -11,6 +11,7 @@ import img12 from '../assets/121081.png'
 import R from '../assets/R.png'
 import dps from '../assets/dps.jpg'
 import logo from '../assets/logo .png'
+import rpng from '../assets/R.png'
 
 
 
@@ -98,7 +99,7 @@ return()=>unSub},[])
             
         <img src={logo} alt='logo' className='hidden  max-[431px]:flex max-[431px]:w-3/6 max-[431px]:h-4/6  max-[431px]:items-center max-[431px]:mt-[-10px] max-[431px]:mb-2 max-[431px]:ml-[23%] w-1/3 h-16 ml-10 rounded-xl' />
        <div className='flex items-center justify-between'> <div className='h-[30px]  hidden max-[431px]:flex bg-white ml-3 mb-2 w-[30px] p-[1px] rounded--md ' onClick={colapsNav}><img className='h-[100%]' src={img12} alt=''></img></div>
-        <div className='h-[20px] mr-3  mb-5 hidden max-[431px]:flex bg-transparent w-fit'  onClick={colSearch}><img className='h-[25px]' src='/src/assets/R.png' alt=''></img></div></div>
+        <div className='h-[20px] mr-3  mb-5 hidden max-[431px]:flex bg-transparent w-fit'  onClick={colSearch}><img className='h-[25px]' src={rpng} alt=''></img></div></div>
 
 
        {colSearchBar ? <div className='flex flex-row  w-1/2'>
