@@ -5,6 +5,8 @@ export default {
     extend: {
       backgroundImage: {
         landBack: "url('/src/assets/1155198.jpg')",
+        logBack: "url('/src/assets/R.jpg')",
+        regBack: "url('/src/assets/regBack.png')",
       },
       screens: {},
     },
