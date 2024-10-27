@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Notification from "./addNotify";
 
 const Player = () => {
 
@@ -45,6 +46,7 @@ const Player = () => {
 
     return (
         <div id="fsc">
+               <Notification message='  තත්පර කිහිපයක් රැදී සිටින්න . PopUp Ads පැමිණ වෙනත් වෙබ් පිටු කරා ගියහොත් ඒවා Close කර නැවත , මෙම වෙබ් පිටුවටම පැමිණෙන්න. වෙනත් වෙබ් පිටු වලින් මෙම චිත්‍රපටය නැරබීමට නොහැක. මෙම  Player එකෙන් නැරබීමට නොහැකි නම් පහල ඇති ප්ලයෙර් 01 උත්සහ කර බලන්න' duration={5000}/>
 
             
             
