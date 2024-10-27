@@ -19,14 +19,8 @@ import Cart from './components/cart'
 
 
 function App() {
-  const location = useLocation();
 
-  useEffect(() => {
-    // Track page view with Google Analytics
-    window.gtag('config', 'G-180NHLYQ5L', {
-      page_path: location.pathname,
-    });
-  }, [location]);
+
 
 
  
