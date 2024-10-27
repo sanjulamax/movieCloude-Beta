@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import { Context } from './context';
 import Cart from './cart';
 import loading from '../assets/loading.gif'
-import Notification from './addNotify';
+
 
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut , createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
 
@@ -68,8 +68,8 @@ const FilmPage = () => {
 
 
     return (
-        <div>
-            <Notification message=' Player page එක වෙත ගිය පසු තත්පර කිහිපයක් රැදී සිටින්න PopUp Ads පැමිණ වෙනත් වෙබ් පිටු කරා ගියහොත් ඒවා Close කර නැවත, එම player වෙබ් පිටුවටම පැමිණෙන්න. වෙනත් වෙබ් පිටු වලින් මෙම චිත්‍රපටය නැරබීමට නොහැක. මෙම පලමු Player එකෙන් නැරබීමට නොහැකි නම් පහල ඇති ප්ලයෙර් 02 උත්සහ කර බලන්න' duration={5000}/>
+      
+         
         <div className="flex w-screen h-full min-h-screen " style={{
             
             backgroundImage : `url("https://image.tmdb.org/t/p/w1280/${data.results[0].backdrop_path}")` ,
@@ -109,7 +109,7 @@ const FilmPage = () => {
            
 
            
-        </div></div>
+        </div>
         
     )
 }
