@@ -3,7 +3,7 @@ import { faL } from '@fortawesome/free-solid-svg-icons'
 import React from 'react' 
 import { useState } from 'react'
 import Home from './components/home'
-import {BrowserRouter , Routes , Route} from 'react-router-dom' 
+import {BrowserRouter , Routes , Route , useLocation} from 'react-router-dom' 
 import Player from './components/player'  
 import Landing from './components/landing'
 import EngPlayerPage from './components/EngPlayerPage'
@@ -19,6 +19,15 @@ import Cart from './components/cart'
 
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Track page view with Google Analytics
+    window.gtag('config', 'G-180NHLYQ5L', {
+      page_path: location.pathname,
+    });
+  }, [location]);
+
 
  
 
